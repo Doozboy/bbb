@@ -147,15 +147,11 @@ function App() {
     const desktopEls = gsap.utils.toArray(".desktop-image");
     const mobileEls  = gsap.utils.toArray(".mobile-image");
 
-    const heroBgDesktop = gsap.utils.toArray(".bg-interactive.hidden");
-    const heroBgMobile  = gsap.utils.toArray(".bg-interactive:not(.hidden)");
-    const arrowEl       = gsap.utils.toArray(".bounce-arrow");
-
-    gsap.to([...desktopEls, ...heroBgDesktop, ...arrowEl], {
+    gsap.to(desktopEls, {
       opacity: 0,
-      scrollTrigger: { trigger: portfolioSectionRef.current, start: "top bottom", end: "center top", scrub: 0 }
+      scrollTrigger: { trigger: portfolioSectionRef.current, start: "center top", end: "top top", scrub: 0 }
     });
-    gsap.to([...mobileEls, ...heroBgMobile], {
+    gsap.to(mobileEls, {
       opacity: 0,
       scrollTrigger: { trigger: portfolioSectionRef.current, start: "top top", end: "top center", scrub: 0 }
     });
