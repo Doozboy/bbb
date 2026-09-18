@@ -157,7 +157,7 @@ function App() {
     });
     const desktopParallaxEls = desktopEls.filter((el: Element) => !el.classList.contains('no-parallax-y'));
     gsap.timeline({
-      scrollTrigger: { trigger: portfolioSectionRef.current, start: "top bottom", end: "bottom top", scrub: 2 }
+      scrollTrigger: { trigger: portfolioSectionRef.current, start: "top bottom", end: "center top", scrub: 2 }
     }).to(desktopParallaxEls, { y: 200, ease: "power1.out" });
 
     gsap.to(portfolioSectionRef.current, {
