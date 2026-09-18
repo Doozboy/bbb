@@ -271,6 +271,7 @@ function App() {
                       zIndex: img.zIndex ?? (img.isStatic ? 0 : index + 10),
                       animation: img.isStatic ? 'none' : `slideUp 1s ease-out ${img.delay}s forwards`,
                       transform: img.isStatic ? 'translateY(0)' : 'translateY(100vh)',
+                      pointerEvents: 'none',
                     })
               }}
             >
